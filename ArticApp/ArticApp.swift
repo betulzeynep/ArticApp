@@ -9,9 +9,17 @@ import SwiftUI
 
 @main
 struct ArticApp: App {
+    @StateObject private var vm: ArtworksViewModel
+
+    init() {
+        // Use dependency injection container
+        let dependencies = AppDependencies.shared
+        _vm = StateObject(wrappedValue: dependencies.createArtworksViewModel())
+    }
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ArtworksGridView(vm: vm)
         }
     }
 }
