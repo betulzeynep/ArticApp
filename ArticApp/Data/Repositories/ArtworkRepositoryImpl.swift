@@ -7,12 +7,6 @@
 
 import Foundation
 
-protocol ArtworkRepository {
-    func getArtworks(artist: String, page: Int) async throws -> [Artwork]
-    func searchArtworks(query: String, page: Int) async throws -> [Artwork]
-    func getArtworkDetails(id: Int) async throws -> Artwork
-}
-
 class ArtworkRepositoryImpl: ArtworkRepository {
     private let networkService: NetworkService
     private let cacheService: CacheService
