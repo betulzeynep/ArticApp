@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct ArticAppApp: App {
+struct ArticApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
