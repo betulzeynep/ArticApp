@@ -7,4 +7,8 @@
 
 import Foundation
 
-struct AppConstants {}
+struct AppConstants {
+    static let cacheTTL: TimeInterval = 300 // 5 minutes
+    static let maxRetries = 3
+    static let defaultPageSize = 20
+}
